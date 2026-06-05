@@ -69,6 +69,18 @@ export default function Contact() {
           </div>
           <div>
             <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">
+              Téléphone
+            </div>
+            <a
+              data-testid="contact-phone"
+              href="tel:+33699401930"
+              className="link-underline font-display text-xl lg:text-2xl"
+            >
+              06 99 40 19 30
+            </a>
+          </div>
+          <div>
+            <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">
               Localisation
             </div>
             <div className="font-display text-xl">Nantes, France</div>

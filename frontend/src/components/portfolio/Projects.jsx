@@ -1,39 +1,43 @@
 const projects = [
   {
     n: "01",
-    year: "2025",
-    title: "ATLAS — Plateforme web",
-    role: "Conception & Dev Full-Stack",
-    tech: ["React", "FastAPI", "MongoDB"],
-    img: "https://images.pexels.com/photos/8408534/pexels-photo-8408534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    year: "2024 — 2025",
+    title: "Baudrier à reconnaissance vocale & IA",
+    subtitle: "Projet phare — Assistance connectée mains-libres",
+    role: "Conception du circuit électronique & supervision du prototype",
+    tech: ["Arduino", "Bluetooth HC-05", "API ChatGPT", "IoT"],
+    img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Plateforme de gestion documentaire avec architecture modulaire, authentification et tableau de bord en temps réel.",
+      "Assistance connectée mains-libres pour les couvreurs sur les chantiers. Le système permet de poser des questions techniques en direct à une IA ou de contrôler des modules sans lâcher ses outils — sécurité et productivité accrues.",
+    span: "lg:col-span-12",
+    ratio: "aspect-[21/9]",
+    flag: "Projet phare",
+  },
+  {
+    n: "02",
+    year: "2023 — 2024",
+    title: "Robot porte-matériel autonome",
+    subtitle: "Projet STI2D — Automatisation logistique",
+    role: "Conception mécatronique & planification",
+    tech: ["SolidWorks", "Infrarouge", "GANTT", "Robotique"],
+    img: "https://images.unsplash.com/photo-1581090700227-1e8e3a5b4b9f?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "Robot chariot autonome capable de suivre un tracé au sol via des capteurs infrarouges, avec une gestion fluide des courbes et des phases d'accélération. Pensé pour les flux logistiques en milieu industriel.",
     span: "lg:col-span-7",
     ratio: "aspect-[16/10]",
   },
   {
-    n: "02",
-    year: "2024",
-    title: "KERNEL.IO",
-    role: "Architecture logicielle",
-    tech: ["Java", "UML", "Patterns"],
-    img: "https://images.unsplash.com/photo-1572202485378-d934798763cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNvZnR3YXJlJTIwY29kZSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3ODA2OTMxMjJ8MA&ixlib=rb-4.1.0&q=85",
+    n: "03",
+    year: "2021 — 2022",
+    title: "Robot de combat autonome — Sumo",
+    subtitle: "Stratégie algorithmique & détection réflexe",
+    role: "Algorithme, design & impression 3D",
+    tech: ["Scratch", "Google SketchUp", "Impression 3D"],
+    img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Étude et implémentation de design patterns appliqués à un système métier complexe — refacto progressive.",
+      "Robot autonome conçu pour éjecter ses adversaires du Dohyo. Intègre des capteurs de contraste pour détecter les bords et éviter les sorties de piste accidentelles.",
     span: "lg:col-span-5",
     ratio: "aspect-[4/5]",
-  },
-  {
-    n: "03",
-    year: "2024",
-    title: "SIGNAL — Système embarqué",
-    role: "STI2D / Hardware-Software",
-    tech: ["C", "Arduino", "TCP/IP"],
-    img: "https://images.unsplash.com/photo-1706509511714-2a1e0f74321e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwbW9iaWxlJTIwYXBwJTIwaW50ZXJmYWNlfGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4MDY5MzEyMnww&ixlib=rb-4.1.0&q=85",
-    description:
-      "Capteurs connectés communiquant via protocole personnalisé. Interface mobile minimaliste pour la supervision.",
-    span: "lg:col-span-12",
-    ratio: "aspect-[21/9]",
   },
 ];
 
@@ -89,17 +93,22 @@ export default function Projects() {
               <div className="absolute top-4 left-4 font-mono text-[10px] tracking-[0.25em] uppercase bg-[#fafafa] px-2 py-1">
                 {p.n} / {p.year}
               </div>
+              {p.flag && (
+                <div className="absolute top-4 right-4 font-mono text-[10px] tracking-[0.25em] uppercase bg-[#0a0a0a] text-white px-2 py-1">
+                  ★ {p.flag}
+                </div>
+              )}
             </div>
-            <div className="flex items-start justify-between mt-4">
+            <div className="flex items-start justify-between mt-4 gap-6">
               <div>
                 <h3 className="font-display text-2xl lg:text-3xl tracking-tight">
                   {p.title}
                 </h3>
                 <div className="font-mono text-xs tracking-[0.2em] uppercase text-neutral-500 mt-1">
-                  {p.role}
+                  {p.subtitle}
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2 justify-end max-w-[60%]">
+              <div className="flex flex-wrap gap-2 justify-end max-w-[55%]">
                 {p.tech.map((t) => (
                   <span
                     key={t}
@@ -110,9 +119,12 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-            <p className="font-body text-sm text-neutral-700 mt-3 max-w-xl">
+            <p className="font-body text-sm text-neutral-700 mt-3 max-w-2xl">
               {p.description}
             </p>
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-neutral-500 mt-2">
+              Mon rôle — {p.role}
+            </div>
           </a>
         ))}
       </div>

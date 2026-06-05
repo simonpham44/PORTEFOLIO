@@ -166,14 +166,14 @@
     transform: translateY(0);
 }
 
-/* Custom Cursor */
+/* Custom Cursor — high visibility (inverted via blend) */
 .cursor-dot {
     position: fixed;
     top: 0;
     left: 0;
-    width: 8px;
-    height: 8px;
-    background: #0a0a0a;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
     border-radius: 9999px;
     pointer-events: none;
     z-index: 10000;
@@ -185,24 +185,24 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 36px;
-    height: 36px;
-    border: 1px solid #0a0a0a;
+    width: 44px;
+    height: 44px;
+    border: 2px solid #ffffff;
     border-radius: 9999px;
     pointer-events: none;
     z-index: 10000;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
-    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
 }
 .cursor-hover .cursor-dot {
     width: 0;
     height: 0;
 }
 .cursor-hover .cursor-ring {
-    width: 64px;
-    height: 64px;
-    border-color: #0a0a0a;
+    width: 72px;
+    height: 72px;
+    border-width: 2px;
 }
 
 @media (pointer: coarse) {

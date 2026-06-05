@@ -59,9 +59,9 @@ export default function About() {
         <div className="col-span-12 lg:col-span-3 lg:col-start-10">
           <div className="aspect-[3/4] overflow-hidden border border-neutral-200">
             <img
-              src="https://images.unsplash.com/photo-1592246030975-b7d803d99e6a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHlvdW5nJTIwbWFufGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4MDY5MzEyMnww&ixlib=rb-4.1.0&q=85"
-              alt="Portrait Simon"
-              className="w-full h-full object-cover img-grayscale"
+              src="https://customer-assets.emergentagent.com/job_clean-showcase-50/artifacts/4cqghmt4_sim.png"
+              alt="Portrait Simon Pham Francheteau"
+              className="w-full h-full object-cover object-center img-grayscale"
               data-testid="about-portrait"
             />
           </div>
