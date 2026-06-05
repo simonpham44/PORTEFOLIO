@@ -1,0 +1,131 @@
+{
+  "project_context": {
+    "name": "Simon Pham Francheteau",
+    "type": "Portfolio (Hybrid Fullstack with Resend for Contact)",
+    "vibe": "Awwwards-level, editorial, sophisticated, architectural, strict monochrome",
+    "theme": "Light Theme (dominant) with inverted Dark sections for contrast",
+    "archetype": "Archetype 4: Swiss & High-Contrast (Adapted for strict Monochrome)"
+  },
+  "typography": {
+    "rules": "Typography is the primary visual element. No Inter or generic default fonts. Hierarchy is extreme. Tension through font pairing.",
+    "fonts": {
+      "heading": "Cabinet Grotesk",
+      "body": "Manrope",
+      "accent": "JetBrains Mono"
+    },
+    "scales": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none font-black",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold uppercase",
+      "h3_item": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-neutral-600",
+      "labels_mono": "font-mono text-xs uppercase tracking-[0.2em] text-neutral-500"
+    }
+  },
+  "color_palette": {
+    "rules": "STRICT MONOCHROME. Zero color accents allowed. Depth is created through typography size, 1px borders, and pure grayscale contrast (black, white, grays).",
+    "colors": {
+      "background_primary": "#FAFAFA",
+      "background_secondary": "#FFFFFF",
+      "background_inverted": "#0A0A0A",
+      "text_primary": "#0A0A0A",
+      "text_secondary": "#555555",
+      "text_inverted": "#FFFFFF",
+      "border_light": "#E5E5E5",
+      "border_dark": "#222222",
+      "accent_pure": "#000000"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_philosophy": "Generous Spacing Philosophy (p-8, p-12, p-24, p-32). Use negative space aggressively to create an editorial feel.",
+    "grids": {
+      "marketing_bento": "Mode A (Tetris Grid) for Projects. Asymmetrical, overlapping layers, empty cells for breathing room.",
+      "data_bento": "Mode B (Control Room) for Skills. High density, 1px borders (border-collapse look), pure monospace technical vibe."
+    },
+    "alignment": "Left-align text heavily. Asymmetry is mandatory. Avoid centering unless it is a specific inverted-color CTA block."
+  },
+  "motion_and_interactions": {
+    "cursor": "Implement a custom cursor (e.g., a black dot that expands into a ring on hover, or an inverted mix-blend-difference circle). Hide default cursor on desktop.",
+    "scroll": "Use Lenis for smooth scrolling (MANDATORY). Use framer-motion for scroll-triggered staggered reveals on typography and parallax on images.",
+    "hovers": "High-contrast structural hovers. E.g., a button changes from pure white with black border to pure black background with white text instantly (no soft fades).",
+    "image_behavior": "All images must have CSS `filter: grayscale(100%)` applied universally to maintain the strict monochrome requirement."
+  },
+  "components_strategy": {
+    "layout_blocks": "Raw HTML + Tailwind. Use strict 1px grid borders (`border-border`) to separate sections. No soft shadows. Use neo-brutalist solid borders if necessary.",
+    "forms": "Use Shadcn/ui (Input, Textarea, Button, Form). Customize to look architectural: remove border radius (rounded-none), use pure black/white borders, maybe only bottom borders for inputs (floating label style).",
+    "buttons": "Rectangular, sharp edges (`rounded-none`). High contrast text. Use magnetic effect on hover via framer-motion if possible."
+  },
+  "sections": {
+    "hero": {
+      "content": "Name: SIMON PHAM FRANCHETEAU. Tagline: Ingénierie Logicielle / Architecture Technique.",
+      "layout": "Massive typography. Name broken into multiple lines if needed. A clean grid overlay. Scroll indicator."
+    },
+    "about": {
+      "content": "Bio: 'Passionné par l'innovation technologique et fort d'un Baccalauréat STI2D (option SIN) obtenu avec mention au Lycée Livet, je développe mes compétences en ingénierie logicielle au sein du BUT Informatique de Nantes. Mon but ? Partir d'une problématique réelle sur le terrain pour concevoir une architecture technique fiable, optimisée et centrée sur l'utilisateur.'",
+      "layout": "Editorial layout. Text on one side, black and white portrait photo on the other with slight parallax."
+    },
+    "skills": {
+      "content": "Categories: Programming, Software Architecture, System & Network.",
+      "layout": "Bento Grid Mode B (Control Room Grid). High density, 1px borders, technical look. Monospace fonts for skill names."
+    },
+    "experience": {
+      "content": "Lycée Livet STI2D (option SIN) -> BUT Informatique de Nantes.",
+      "layout": "Minimalist vertical timeline. Sharp 1px left border. Dates in monospace."
+    },
+    "projects": {
+      "content": "3 Placeholder projects (Web App, Software Architecture, Mobile/System Project).",
+      "layout": "Mode A (Tetris Grid). Large grayscale images. High contrast overlays on hover."
+    },
+    "testimonials": {
+      "content": "Placeholder recommendations.",
+      "layout": "Clean typographic quotes. Huge serif/grotesk quotation marks. No avatars, just names and roles."
+    },
+    "blog": {
+      "content": "Placeholder articles.",
+      "layout": "List format (border-b on each row), date on the left, title in the middle, arrow on the right. Very strict table-like aesthetic."
+    },
+    "contact": {
+      "content": "Email form (Name, Email, Message) sending via Resend. GitHub & LinkedIn links.",
+      "layout": "Inverted section (Dark mode). Pure black background, white text, white 1px border inputs. Massive 'SAY HELLO' or 'CONTACT' text."
+    }
+  },
+  "image_urls": {
+    "portrait": {
+      "url": "https://images.unsplash.com/photo-1592246030975-b7d803d99e6a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHlvdW5nJTIwbWFufGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4MDY5MzEyMnww&ixlib=rb-4.1.0&q=85",
+      "description": "Black and white portrait of a young professional man in a suit jacket.",
+      "usage": "About Section"
+    },
+    "project_1_web": {
+      "url": "https://images.pexels.com/photos/8408534/pexels-photo-8408534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Sleek smartphone displaying a modern website in a serene background (will be forced grayscale).",
+      "usage": "Projects Section - Web App"
+    },
+    "project_2_architecture": {
+      "url": "https://images.unsplash.com/photo-1572202485378-d934798763cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNvZnR3YXJlJTIwY29kZSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3ODA2OTMxMjJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Computer screen showing programming codes in black and white.",
+      "usage": "Projects Section - Software Architecture"
+    },
+    "project_3_mobile": {
+      "url": "https://images.unsplash.com/photo-1706509511714-2a1e0f74321e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwbW9iaWxlJTIwYXBwJTIwaW50ZXJmYWNlfGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4MDY5MzEyMnww&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist cell phone sitting on a table in black and white.",
+      "usage": "Projects Section - Mobile/System Project"
+    },
+    "blog_placeholder": {
+      "url": "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHNvZnR3YXJlJTIwY29kZSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3ODA2OTMxMjJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Black and gray laptop displaying codes.",
+      "usage": "Blog Section (if images are needed on hover)"
+    }
+  },
+  "testing": {
+    "attributes": "All interactive elements, buttons, inputs, form submissions, and nav links MUST use data-testid (e.g., data-testid='contact-submit-button', data-testid='nav-about-link')."
+  },
+  "instructions_to_main_agent": [
+    "Follow the strict monochrome aesthetic: no colors whatsoever, use pure greys, whites, and blacks.",
+    "Implement Lenis for smooth scrolling.",
+    "Do NOT use 'Inter' font. Import 'Cabinet Grotesk', 'Manrope', and 'JetBrains Mono' via Google Fonts or Fontshare.",
+    "Apply `grayscale` filter to all images via Tailwind class `grayscale`.",
+    "Ensure all Grid layouts strictly follow the bento structure provided (Mode A for projects, Mode B for skills).",
+    "Include a custom cursor using framer-motion that tracks the mouse pointer.",
+    "Read the EXACT bio string provided in the 'About' section block and use it verbatim.",
+    "Build the contact form using Shadcn but strip it of its default Vercel-like appearance (make it sharp, rounded-none, architectural)."
+  ]
+}
